@@ -52,11 +52,14 @@ btnEq.addEventListener("click", () => {
 //select which operation to perform
 function selectOperation() {
   for (let i = 0; i < valuesArr.length; i++) {
+    console.log(valuesArr[i]);
     switch(valuesArr[i]){
       case"X":
       result = multiplyingNumbers(valuesArr);
       break;
       case"/":
+      console.log("test");
+      // return "test"
       result = dividingNumbers(valuesArr);
       break;
       case"+":
