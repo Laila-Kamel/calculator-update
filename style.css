@@ -8,7 +8,7 @@
 
 .calc {
   background-color: #565a59;
-  height: 500px;
+  height: 550px;
   width: 400px;
   border-radius: 20px;
   padding: 20px;
@@ -26,12 +26,22 @@
   box-shadow: #d1e0cd;
   margin: 40px 0;
 }
+.calc__display input {
+  width: 95%;
+  height: 100%;
+  background-color: transparent;
+  color: black;
+  font-size: 46px;
+  text-align: right;
+  border: none;
+}
 .calc__btns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 }
-.calc__btns__btn {
+
+.btns__btn, .eqBtns__btn--equal, .btns__btnOp, .btns__btnEq {
   background-color: #eef0ec;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -40,6 +50,14 @@
   height: 70px;
   text-align: center;
 }
-.calc__btns__btn--equal {
+.btns__btn--equal, .btns__btnOp--equal, .btns__btnEq--equal {
   background-color: #f1c174;
+}
+
+.eqBtns {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.eqBtns__btn--equal {
+  margin-top: 15px;
 }

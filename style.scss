@@ -1,1 +1,64 @@
-@use "modules.scss/container.scss";
+@use "../partials.scss/colors";
+@use "../partials.scss/mixins.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  @include mixins.flex-center;
+}
+
+.calc {
+  background-color: colors.$dark-grey;
+  height: 550px;
+  width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  @include mixins.flex-column;
+
+  &__display {
+    width: 400px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: colors.$green;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px inset black;
+    box-shadow: colors.$green;
+    margin: 40px 0;
+    input{
+      width:95%;
+      height:100%;
+      background-color: transparent;
+      color:black;
+      font-size: 46px;
+      text-align: right;
+      border: none;
+    }
+  }
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+.btns {
+  &__btn,&__btnOp,&__btnEq {
+    background-color: colors.$light-grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 40px;
+    height: 70px;
+    text-align: center;
+    &--equal {
+      background-color: colors.$orange;
+    }
+  }
+}
+.eqBtns{
+  display: grid;
+  grid-template-columns: 1fr;
+  &__btn--equal{
+    @extend .btns__btn;
+    margin-top: 15px;
+  }
+}
