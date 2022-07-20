@@ -1,5 +1,6 @@
-@use "../partials.scss/colors";
-@use "../partials.scss/mixins.scss";
+@use "partials.scss/colors";
+@use "partials.scss/mixins.scss";
+@use "partials.scss/devices";
 
 .container {
   width: 100vw;
@@ -11,6 +12,10 @@
   background-color: colors.$dark-grey;
   height: 550px;
   width: 400px;
+  @include devices.phone{
+    width:200px;
+    height:900px;
+  }
   border-radius: 20px;
   padding: 20px;
   @include mixins.flex-column;
@@ -24,6 +29,10 @@
     border: 2px inset black;
     box-shadow: colors.$green;
     margin: 40px 0;
+    @include devices.phone{
+      width:200px;
+      // height:900px;
+    }
     input{
       width:95%;
       height:100%;
@@ -38,6 +47,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
+    @include devices.phone{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+    }
   }
 }
 .btns {
@@ -51,6 +64,69 @@
     text-align: center;
     &--equal {
       background-color: colors.$orange;
+      @include devices.phone{
+        order:16
+      }
+    }
+    &--0 {
+      @include devices.phone{
+        order:1
+      }
+    }
+    &--1 {
+      @include devices.phone{
+        order:2
+      }
+    }
+    &--2 {
+      @include devices.phone{
+        order:3
+      }
+    }
+    &--3 {
+      @include devices.phone{
+        order:4
+      }
+    }
+    &--4 {
+      @include devices.phone{
+        order:5
+      }
+    }
+    &--5 {
+      @include devices.phone{
+        order:6
+      }
+    }
+    &--6 {
+      @include devices.phone{
+        order:7
+      }
+    }
+    &--7 {
+      @include devices.phone{
+        order:8
+      }
+    }
+    &--8 {
+      @include devices.phone{
+        order:9
+      }
+    }
+    &--9 {
+      @include devices.phone{
+        order:10
+      }
+    }
+    &--dot {
+      @include devices.phone{
+        order:11
+      }
+    }
+  }
+  &__btnOp{
+    @include devices.phone{
+      order:12
     }
   }
 }

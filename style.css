@@ -16,6 +16,12 @@
   flex-direction: column;
   justify-content: baseline;
 }
+@media only screen and (max-width: 576px) {
+  .calc {
+    width: 200px;
+    height: 900px;
+  }
+}
 .calc__display {
   width: 400px;
   height: 80px;
@@ -25,6 +31,11 @@
   border: 2px inset black;
   box-shadow: #d1e0cd;
   margin: 40px 0;
+}
+@media only screen and (max-width: 576px) {
+  .calc__display {
+    width: 200px;
+  }
 }
 .calc__display input {
   width: 95%;
@@ -40,6 +51,12 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 }
+@media only screen and (max-width: 576px) {
+  .calc__btns {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+}
 
 .btns__btn, .eqBtns__btn--equal, .btns__btnOp, .btns__btnEq {
   background-color: #eef0ec;
@@ -52,6 +69,71 @@
 }
 .btns__btn--equal, .btns__btnOp--equal, .btns__btnEq--equal {
   background-color: #f1c174;
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--equal, .btns__btnOp--equal, .btns__btnEq--equal {
+    order: 16;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--0, .btns__btnOp--0, .btns__btnEq--0 {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--1, .btns__btnOp--1, .btns__btnEq--1 {
+    order: 2;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--2, .btns__btnOp--2, .btns__btnEq--2 {
+    order: 3;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--3, .btns__btnOp--3, .btns__btnEq--3 {
+    order: 4;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--4, .btns__btnOp--4, .btns__btnEq--4 {
+    order: 5;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--5, .btns__btnOp--5, .btns__btnEq--5 {
+    order: 6;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--6, .btns__btnOp--6, .btns__btnEq--6 {
+    order: 7;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--7, .btns__btnOp--7, .btns__btnEq--7 {
+    order: 8;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--8, .btns__btnOp--8, .btns__btnEq--8 {
+    order: 9;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--9, .btns__btnOp--9, .btns__btnEq--9 {
+    order: 10;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btn--dot, .btns__btnOp--dot, .btns__btnEq--dot {
+    order: 11;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btns__btnOp {
+    order: 12;
+  }
 }
 
 .eqBtns {
